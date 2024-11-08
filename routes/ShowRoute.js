@@ -30,6 +30,13 @@ showRouter.put("/:showid/available", async (req, res) => {
     res.json(show)
 })
 
+showRouter.delete("/:showid" , async (req, res) => {
+    const { showid } = req.params 
+
+    const show = ShowfindByPk(showid)
+
+})
+
 
 
 module.exports = showRouter
